@@ -321,6 +321,23 @@ section:last-of-type { border-bottom: none; }
   padding: 28px 30px;
   transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
+
+.exp-logo {
+  color: var(--muted);
+  opacity: 0.7;
+  margin-bottom: 10px;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.exp-logo svg {
+  width: 156px;
+  height: 36px;
+}
+
+.exp-card:hover .exp-logo {
+  opacity: 1;
+  color: var(--text);
+}
 .exp-card:hover {
   border-color: rgba(79, 142, 247, 0.35);
   background: var(--bg-hover);
@@ -473,36 +490,6 @@ section:last-of-type { border-bottom: none; }
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-}
-
-/* ─── Company Logos ────────────────────────────────────────────────── */
-#companies { padding: 48px 0; }
-
-.company-label { text-align: center; }
-
-.company-grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.company-logo {
-  color: var(--muted);
-  opacity: 0.45;
-  transition: opacity 0.3s, color 0.3s;
-  cursor: default;
-}
-
-.company-logo svg {
-  width: 140px;
-  height: 36px;
-}
-
-.company-logo:hover {
-  opacity: 1;
-  color: var(--accent);
 }
 
 /* ─── Stats ────────────────────────────────────────────────────────── */
@@ -700,9 +687,6 @@ footer {
   .hero-ctas { justify-content: center; }
 
   .section-title { font-size: 1.4rem; margin-bottom: 32px; }
-
-  .company-grid { gap: 24px; }
-  .company-logo svg { width: 120px; height: 30px; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .stat-number, .stat-plus { font-size: 2rem; }
