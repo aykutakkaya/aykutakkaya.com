@@ -475,6 +475,36 @@ section:last-of-type { border-bottom: none; }
   gap: 12px;
 }
 
+/* ─── Company Logos ────────────────────────────────────────────────── */
+#companies { padding: 48px 0; }
+
+.company-label { text-align: center; }
+
+.company-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.company-logo {
+  color: var(--muted);
+  opacity: 0.45;
+  transition: opacity 0.3s, color 0.3s;
+  cursor: default;
+}
+
+.company-logo svg {
+  width: 140px;
+  height: 36px;
+}
+
+.company-logo:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
 /* ─── Stats ────────────────────────────────────────────────────────── */
 #stats { padding: 48px 0; }
 
@@ -670,6 +700,9 @@ footer {
   .hero-ctas { justify-content: center; }
 
   .section-title { font-size: 1.4rem; margin-bottom: 32px; }
+
+  .company-grid { gap: 24px; }
+  .company-logo svg { width: 120px; height: 30px; }
 
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .stat-number, .stat-plus { font-size: 2rem; }
